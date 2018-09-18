@@ -5,7 +5,7 @@ set -e
 
 if [ `id -u` -ge 500 ]; then
     echo "rabbitmq:x:`id -u`:`id -g`:,,,:${HOME}:/bin/ash" >> /tmp/passwd
-    cat /tmp/passwd > /etc/passwd
+    cat /tmp/passwd >> /etc/passwd
     rm /tmp/passwd
 fi
 
